@@ -1,0 +1,441 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #222831;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+h1 {
+  font-family: "Nixie One", cursive;
+  font-weight: bolder;
+  display: inline-block;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+h2 {
+  color: white;
+  font-family: "Nixie One", cursive;
+  font-weight: bolder;
+  display: inline-block;
+  font-size: 100%;
+}
+
+p {
+  font-family: "Nixie One", cursive;
+  padding-left: 5%;
+  font-size: 100%;
+}
+
+.logo {
+  width: 10%;
+  padding: 3%;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+main section {
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+  max-height: 550px;
+  background: rgba(242, 242, 242, 0.9058823529);
+  margin-top: 5%;
+  margin-bottom: 25px;
+  padding: 2%;
+}
+
+#grid {
+  overflow: hidden;
+  border-radius: 10px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 3fr 1fr 3fr;
+}
+#grid .box:nth-child(1) {
+  background-color: rgba(242, 242, 242, 0);
+  border-radius: 20px;
+  grid-column: 1/-3;
+  grid-row: 1/2;
+}
+#grid .box:nth-child(2) {
+  background-color: rgba(242, 242, 242, 0);
+  border-radius: 20px;
+  grid-column: -3/-2;
+  grid-row: 1/2;
+}
+#grid .box:nth-child(3) {
+  background-color: #393939;
+  border-radius: 20px;
+}
+#grid .box:nth-child(4) {
+  background-color: white;
+  border-radius: 20px;
+}
+#grid .box:nth-child(5) {
+  background-color: white;
+  border-radius: 20px;
+}
+#grid .box:nth-child(6) {
+  background-color: white;
+  border-radius: 20px;
+}
+#grid .box:nth-child(7) {
+  background-color: white;
+  border-radius: 20px;
+  grid-column: 5/6;
+  grid-row: 1/4;
+}
+#grid .box:nth-child(8) {
+  background-color: white;
+  border-radius: 20px;
+  grid-column: 1/5;
+  grid-row: 3/5;
+  overflow: auto;
+}
+#grid .box ::-webkit-scrollbar {
+  width: 2px;
+}
+#grid .box:nth-child(9) {
+  background-color: #393939;
+  border-radius: 20px;
+}
+
+.Transfer-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #393939, #393939);
+  transform-origin: bottom right;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+}
+
+.Transfer-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, transparent, #393939, #393939);
+  transform-origin: bottom right;
+  -webkit-animation: animate 6s linear infinite;
+          animation: animate 6s linear infinite;
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Transfer2-card {
+  background-color: rgb(247, 245, 245);
+  position: absolute;
+  inset: 4px;
+  border-radius: 20px;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3fr 1fr 1fr 1fr 1fr 2fr;
+}
+.Transfer2-card .tran-box:nth-child(1) {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5%;
+  font-family: "Nixie One", cursive;
+  font-weight: 100;
+  font-size: 150%;
+}
+.Transfer2-card .tran-box:nth-child(2) {
+  grid-column: 1/-1;
+  grid-row: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 5%;
+  font-family: "Nixie One", cursive;
+  font-weight: 100;
+}
+.Transfer2-card .tran-box:nth-child(3) {
+  grid-column: 1/-1;
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Lobster", cursive;
+  border: 0px;
+}
+.Transfer2-card .tran-box:nth-child(4) {
+  grid-column: 1/-1;
+  grid-row: 4;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-left: 5%;
+  font-family: "Nixie One", cursive;
+  font-weight: 100;
+}
+.Transfer2-card .tran-box:nth-child(5) {
+  grid-column: 1/-1;
+  grid-row: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Lobster", cursive;
+  border: 0px;
+}
+.Transfer2-card .tran-box:nth-child(6) {
+  grid-column: 1/2;
+  grid-row: 6;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 10%;
+  font-family: "Lobster", cursive;
+}
+.Transfer2-card .tran-box:nth-child(7) {
+  grid-column: -2/-1;
+  grid-row: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-family: "Lobster", cursive;
+}
+
+input[type=submit] {
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 50%;
+}
+
+table {
+  width: 100%;
+  padding-top: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-family: "Nixie One", cursive;
+}
+
+.table__body table thead tr td:nth-last-child(1),
+.table__body table tbody tr td:nth-last-child(1) {
+  text-align: center;
+}
+
+.table__body table tbody tr td:nth-child(1) {
+  text-align: center;
+}
+
+.table__body table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.0431372549);
+}
+
+.table__body {
+  width: 100%;
+  overflow: auto;
+  overflow: overlay;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.scroll::-web-kit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2666666667);
+  visibility: hidden;
+}
+
+.scroll:hover::-web-kit-scrollbar-thumb {
+  visibility: visible;
+}
+
+table, th, td {
+  text-align: start;
+  vertical-align: middle;
+}
+
+#ic-on {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+}
+
+.free {
+  font-size: 150%;
+  color: white;
+  margin-bottom: 0%;
+}
+
+.free2 {
+  display: inline-block;
+  font-size: 90%;
+  color: white;
+}
+
+.free-card {
+  text-align: center;
+  color: white;
+  font-family: "Nixie One", cursive;
+  font-size: 90%;
+}
+
+#amount-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#amount-card .amount-box:nth-child(1) {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5%;
+  font-family: "Lobster", cursive;
+  font-weight: 100;
+  font-size: 150%;
+}
+#amount-card .amount-box:nth-child(2) {
+  grid-column: -2/-1;
+  grid-row: 1/2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 5%;
+  font-weight: 100;
+}
+#amount-card .amount-box:nth-child(3) {
+  grid-column: -2/-1;
+  grid-row: 2/3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-right: 5%;
+  font-weight: 100;
+}
+#amount-card .amount-box:nth-child(4) {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-left: 5%;
+  font-family: "Nixie One", cursive;
+  font-weight: bolder;
+  font-size: 100%;
+}
+#amount-card .amount-box:nth-child(5) {
+  grid-column: 2/-2;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5%;
+}
+#amount-card .amount-box:nth-child(6) {
+  grid-column: 1/-1;
+  grid-row: 5/6;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-left: 5%;
+}
+#amount-card .amount-box:nth-child(7) {
+  grid-column: 1/-1;
+  grid-row: 6/7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 10%;
+}
+
+.bot-left {
+  position: relative;
+  bottom: 0;
+  right: 0;
+}
+
+.coin-img {
+  width: 30%;
+  filter: gray; /* IE6-9 */ /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1);
+}
+
+#coin-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+}
+#coin-card .coin-box:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+#coin-card .coin-box:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+  font-family: "Lobster", cursive;
+  font-weight: 100;
+  font-size: 100%;
+}
+#coin-card .coin-box:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+  font-weight: bold;
+  font-family: "Nixie One", cursive;
+  font-size: 150%;
+}
+#coin-card .coin-box:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+  font-family: "Lobster", cursive;
+  font-weight: 100;
+  font-size: 100%;
+}/*# sourceMappingURL=styles.css.map */
